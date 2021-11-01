@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 // GET /api/users
 router.get('/', (req, res) => {
     User.findAll({
-        attributes: { exlude:'password'}
+        attributes: { exclude:['password']}
     })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     })
 
 });
-
+2
 // GET /api/users/1
 router.get('/:id', (req, res) => {
     User.findOne({
@@ -95,6 +95,10 @@ router.post('/login', (req, res) => {
 
             res.json({ user: dbUserData, message: 'You are logged in!'})
         })
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
     })
 })
 router.post('/logout', withAuth, (req,res) => {
