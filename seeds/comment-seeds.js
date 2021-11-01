@@ -4,7 +4,7 @@ const commentdata = [
   {
     comment_text: 'This is a tech blog message',
     user_id: 6,
-    post_id: 1
+    //post_id: 1
   },
   {
     comment_text: 'This is another one!',
