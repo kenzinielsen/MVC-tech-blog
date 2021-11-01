@@ -7,6 +7,7 @@ This app was created so developers can write and publish tech related blog posts
 
 
 Live url:
+https://techblogkn.herokuapp.com/
 
 
 ## Built with
