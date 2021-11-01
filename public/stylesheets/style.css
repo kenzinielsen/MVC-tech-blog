@@ -32,9 +32,11 @@ header {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: #333;
+    color:#9370db;
   }
-  
+  h1 {
+    font-size: 30px;
+  }
   a {
     text-decoration: none;
     font-weight: bold;
@@ -42,7 +44,7 @@ header {
   }
   
   a:hover {
-    color: #3486eb;
+    color: #9370db ;
   }
   
   button {
@@ -139,7 +141,7 @@ header {
   .post .title span {
     font-style: italic;
     font-size: 90%;
-    color: #7d7d7d;
+    color: #9370db;
   }
   
   .edit-link {
@@ -157,7 +159,7 @@ header {
   }
   
   .comment:nth-child(odd) {
-    background-color: #fff5eb;
+    background-color: #9370db;
   }
   
   .comment .meta {
