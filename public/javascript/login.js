@@ -15,12 +15,12 @@ async function loginFormHandler(event) {
       });
       //check the response status
       if (response.ok) {
-          console.log('success');
+         document.location.replace('/dashboard')
       } else {
           alert(response.statusText);
       }
     }
   }
-  document.querySelector('.login-form').addEventListener('sumbit', loginFormHandler);
+  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 
   

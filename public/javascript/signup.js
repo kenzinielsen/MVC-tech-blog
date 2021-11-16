@@ -1,9 +1,8 @@
 async function signupFormHandler(event) {
     event.preventDefault();
-    
     const username = document.querySelector('#username-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
-    
+    console.log(username, password)
     if (username && password) {
       const response = await fetch('/api/users', {
         method: 'post',
@@ -22,5 +21,4 @@ async function signupFormHandler(event) {
     }
   }
 
-
-document.querySelector('.signup-form').addEventListener('sumbit', signupFormHandler);
+document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);

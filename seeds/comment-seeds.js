@@ -1,6 +1,6 @@
+const sequelize = require('../config/connection');
 const { Comment } = require('../models');
-
-const commentdata = [
+const commentData = [
   {
     comment_text: 'This is a tech blog message',
     user_id: 6,
@@ -48,6 +48,6 @@ const commentdata = [
   },
 ];
 
-const seedComments = () => Comment.bulkCreate(commentdata);
+const seedComments = () => Comment.bulkCreate(commentData);
 
 module.exports = seedComments;

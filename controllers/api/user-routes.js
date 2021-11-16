@@ -67,10 +67,10 @@ router.post('/', (req, res) => {
             res.json(dbUserData);
         })
     })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err)
-    })
+   //.catch(err => {
+   //    console.log(err);
+   //    res.status(500).json(err)
+   //})
 });
 
 router.post('/login', (req, res) => {
@@ -103,7 +103,8 @@ router.post('/login', (req, res) => {
 })
 router.post('/logout', withAuth, (req,res) => {
     if (req.session.loggedIn) {
-        res.session.destroy(() => {
+        console.log(req.session)
+        req.session.destroy(() => {
             res.status(204).end();
         })
     } else {

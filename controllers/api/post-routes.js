@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
         attributes: [
             'id',
             'title',
-            'content',
+            'contents',
             'create_at'
         ],
         order: [['created_at', 'DESC']],
@@ -31,6 +31,19 @@ router.get('/', (req, res) => {
     })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+})
+
+router.post("/",withAuth, (req,res) => {
+    console.log(req.body)
+     Post.create({
+         ...req.body,
+         user_id: req.session.user_id
+     })
+     .then(dbPostData => res.json(dbPostData))
+        .catch(err => {
         console.log(err);
         res.status(500).json(err);
     })
